@@ -1,0 +1,245 @@
+{
+ "meta": {
+  "analysis": "laws",
+  "command": "python -m pipeline.analysis.laws",
+  "commit": "fc4e2e4",
+  "dirty": false,
+  "date": "2026-10-18",
+  "study": {
+   "models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-7b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.1-8b",
+    "llama-3.2-3b",
+    "gemma-2-9b"
+   ],
+   "study_models": [
+    "qwen2.5-7b",
+    "llama-3.1-8b",
+    "gemma-2-9b"
+   ],
+   "heldout_models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.2-3b"
+   ],
+   "draws": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "directions": [
+    "dim",
+    "ca",
+    "ace"
+   ],
+   "bootstrap": {
+    "n": 5000,
+    "seed": 0
+   },
+   "amplification_templates": [
+    "jbb_dev_mode",
+    "jbb_research",
+    "jbb_evil_confidant",
+    "jbb_few_shot_compliance"
+   ],
+   "emotion_strength_emotions": [
+    "happy",
+    "sad",
+    "afraid"
+   ],
+   "gates_model": "llama-3.2-3b",
+   "names": {
+    "models": {
+     "qwen2.5-0.5b": "Qwen2.5-0.5B",
+     "qwen3-4b": "Qwen3-4B",
+     "qwen2.5-7b": "Qwen2.5-7B",
+     "qwen2.5-3b": "Qwen2.5-3B",
+     "gemma-2-2b": "Gemma-2-2B",
+     "llama-3.1-8b": "Llama-3.1-8B",
+     "llama-3.2-3b": "Llama-3.2-3B",
+     "gemma-2-9b": "Gemma-2-9B"
+    },
+    "models_short": {
+     "qwen2.5-0.5b": "Q-0.5B",
+     "qwen3-4b": "Q3-4B",
+     "qwen2.5-7b": "Q-7B",
+     "qwen2.5-3b": "Q-3B",
+     "gemma-2-2b": "G-2B",
+     "llama-3.1-8b": "L-8B",
+     "llama-3.2-3b": "L-3B",
+     "gemma-2-9b": "G-9B"
+    },
+    "directions": {
+     "none": "none",
+     "dim": "DIM",
+     "ca": "CA",
+     "ace": "ACE"
+    }
+   }
+  }
+ },
+ "results": {
+  "unit": "fractions; correlations over the 8 models",
+  "n": 8,
+  "laws": {
+   "omega": {
+    "qwen2.5-3b": 0.1246095597743988,
+    "qwen2.5-0.5b": 0.022000640630722046,
+    "qwen3-4b": 0.0341198593378067,
+    "llama-3.2-3b": 0.4380479156970978,
+    "gemma-2-2b": 0.31523042917251587,
+    "qwen2.5-7b": 0.041,
+    "llama-3.1-8b": 0.332,
+    "gemma-2-9b": 0.471
+   },
+   "eta": {
+    "qwen2.5-3b": 0.92083340883255,
+    "qwen2.5-0.5b": 0.6791666746139526,
+    "qwen3-4b": 0.9625000357627869,
+    "llama-3.2-3b": 0.0833333358168602,
+    "gemma-2-2b": 0.9791667461395264,
+    "qwen2.5-7b": 0.888,
+    "llama-3.1-8b": 0.458,
+    "gemma-2-9b": 0.979
+   },
+   "faithfulness_law": {
+    "pearson": 0.9007468410205709,
+    "spearman": 0.9761904761904763
+   },
+   "efficacy_law_hb": {
+    "pearson": -0.9528232998234692,
+    "spearman": -0.8095238095238096
+   },
+   "efficacy_law_lgf": {
+    "pearson": -0.9502250434425498,
+    "spearman": -0.6904761904761906
+   },
+   "omega_vs_asr_gain": {
+    "pearson": 0.5375469144717645,
+    "spearman": 0.19047619047619052
+   },
+   "ace_excess_vs_omega": {
+    "pearson": 0.8013210203796162,
+    "spearman": 0.5748606057183643
+   },
+   "gain_hb": {
+    "qwen2.5-0.5b": -0.000694444444444442,
+    "qwen3-4b": -0.002777777777777782,
+    "qwen2.5-7b": -0.021527777777777812,
+    "qwen2.5-3b": 0.023611111111111194,
+    "gemma-2-2b": -0.025694444444444464,
+    "llama-3.1-8b": 0.28958333333333336,
+    "llama-3.2-3b": 0.4631944444444445,
+    "gemma-2-9b": -0.0076388888888888895
+   },
+   "dfaith": {
+    "qwen2.5-0.5b": -0.008333333333333304,
+    "qwen3-4b": -0.0016666666666666496,
+    "qwen2.5-7b": 0.013333333333333364,
+    "qwen2.5-3b": 0.046666666666666745,
+    "gemma-2-2b": 0.16500000000000004,
+    "llama-3.1-8b": 0.1233333333333333,
+    "llama-3.2-3b": 0.185,
+    "gemma-2-9b": 0.4033333333333334
+   },
+   "ace_excess": {
+    "qwen2.5-0.5b": 0.00666666666666671,
+    "qwen3-4b": -0.00833333333333336,
+    "qwen2.5-7b": 0.07166666666666666,
+    "qwen2.5-3b": -0.07833333333333325,
+    "gemma-2-2b": -0.013333333333333308,
+    "llama-3.1-8b": 0.39333333333333337,
+    "llama-3.2-3b": 0.46,
+    "gemma-2-9b": 0.39333333333333337
+   }
+  },
+  "locked_sim": {
+   "qwen2.5-3b": {
+    "dim": {
+     "harm_token_change": 0.92083340883255,
+     "benign_token_change": 0.08125000447034836,
+     "gate_harm": 0.4776560068130493,
+     "gate_benign": -0.08496809005737305
+    },
+    "ca": {
+     "harm_token_change": 0.9500000476837158,
+     "benign_token_change": 0.05000000074505806,
+     "gate_harm": 0.563225507736206,
+     "gate_benign": 0.007243561092764139
+    }
+   },
+   "qwen2.5-0.5b": {
+    "dim": {
+     "harm_token_change": 0.6791666746139526,
+     "benign_token_change": 0.125,
+     "gate_harm": 0.3128308951854706,
+     "gate_benign": -0.0033550739753991365
+    },
+    "ca": {
+     "harm_token_change": 0.7000000476837158,
+     "benign_token_change": 0.13125000894069672,
+     "gate_harm": 0.3303339183330536,
+     "gate_benign": 0.014234252274036407
+    }
+   },
+   "qwen3-4b": {
+    "dim": {
+     "harm_token_change": 0.9625000357627869,
+     "benign_token_change": 0.04374999925494194,
+     "gate_harm": 0.6209769248962402,
+     "gate_benign": -0.010814625769853592
+    },
+    "ca": {
+     "harm_token_change": 0.9625000357627869,
+     "benign_token_change": 0.03125,
+     "gate_harm": 0.639518141746521,
+     "gate_benign": 0.012018824927508831
+    }
+   },
+   "llama-3.2-3b": {
+    "dim": {
+     "harm_token_change": 0.0833333358168602,
+     "benign_token_change": 0.25,
+     "gate_harm": 0.3160240352153778,
+     "gate_benign": -0.2804260849952698
+    },
+    "ca": {
+     "harm_token_change": 0.7875000238418579,
+     "benign_token_change": 0.05625000223517418,
+     "gate_harm": 0.5780608654022217,
+     "gate_benign": 0.003259822726249695
+    }
+   },
+   "gemma-2-2b": {
+    "dim": {
+     "harm_token_change": 0.9791667461395264,
+     "benign_token_change": 0.26250001788139343,
+     "gate_harm": 0.6161243915557861,
+     "gate_benign": 0.28971171379089355
+    },
+    "ca": {
+     "harm_token_change": 0.9625000357627869,
+     "benign_token_change": 0.04374999925494194,
+     "gate_harm": 0.3505103886127472,
+     "gate_benign": 0.006636360194534063
+    }
+   }
+  },
+  "locked_regime": {
+   "qwen2.5-3b": "no-op",
+   "qwen2.5-0.5b": "no-op",
+   "qwen3-4b": "no-op",
+   "llama-3.2-3b": "collapse-fix",
+   "gemma-2-2b": "gate-gain"
+  }
+ }
+}

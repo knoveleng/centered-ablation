@@ -1,0 +1,145 @@
+{
+ "meta": {
+  "analysis": "mmlu",
+  "command": "python -m pipeline.analysis.frozen_tables",
+  "commit": "979b261",
+  "dirty": true,
+  "date": "2026-10-20",
+  "study": {
+   "models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-7b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.1-8b",
+    "llama-3.2-3b",
+    "gemma-2-9b"
+   ],
+   "study_models": [
+    "qwen2.5-7b",
+    "llama-3.1-8b",
+    "gemma-2-9b"
+   ],
+   "heldout_models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.2-3b"
+   ],
+   "draws": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "directions": [
+    "dim",
+    "ca",
+    "ace"
+   ],
+   "bootstrap": {
+    "n": 5000,
+    "seed": 0
+   },
+   "amplification_templates": [
+    "jbb_dev_mode",
+    "jbb_research",
+    "jbb_evil_confidant",
+    "jbb_few_shot_compliance"
+   ],
+   "emotion_strength_emotions": [
+    "happy",
+    "sad",
+    "afraid"
+   ],
+   "gates_model": "llama-3.2-3b",
+   "names": {
+    "models": {
+     "qwen2.5-0.5b": "Qwen2.5-0.5B",
+     "qwen3-4b": "Qwen3-4B",
+     "qwen2.5-7b": "Qwen2.5-7B",
+     "qwen2.5-3b": "Qwen2.5-3B",
+     "gemma-2-2b": "Gemma-2-2B",
+     "llama-3.1-8b": "Llama-3.1-8B",
+     "llama-3.2-3b": "Llama-3.2-3B",
+     "gemma-2-9b": "Gemma-2-9B"
+    },
+    "models_short": {
+     "qwen2.5-0.5b": "Q-0.5B",
+     "qwen3-4b": "Q3-4B",
+     "qwen2.5-7b": "Q-7B",
+     "qwen2.5-3b": "Q-3B",
+     "gemma-2-2b": "G-2B",
+     "llama-3.1-8b": "L-8B",
+     "llama-3.2-3b": "L-3B",
+     "gemma-2-9b": "G-9B"
+    },
+    "directions": {
+     "none": "none",
+     "dim": "DIM",
+     "ca": "CA",
+     "ace": "ACE"
+    }
+   }
+  }
+ },
+ "results": {
+  "unit": "accuracy",
+  "n": 1000,
+  "mmlu": {
+   "qwen2.5-7b": {
+    "none": 0.715,
+    "dim": 0.714,
+    "ca": 0.714,
+    "ace": 0.714
+   },
+   "llama-3.1-8b": {
+    "none": 0.64,
+    "dim": 0.64,
+    "ca": 0.638,
+    "ace": 0.639
+   },
+   "gemma-2-9b": {
+    "none": 0.698,
+    "dim": 0.694,
+    "ca": 0.7,
+    "ace": 0.7
+   },
+   "qwen2.5-3b": {
+    "none": 0.611,
+    "dim": 0.609,
+    "ca": 0.609,
+    "ace": 0.612
+   },
+   "qwen2.5-0.5b": {
+    "none": 0.435,
+    "dim": 0.428,
+    "ca": 0.43,
+    "ace": 0.431
+   },
+   "qwen3-4b": {
+    "none": 0.679,
+    "dim": 0.68,
+    "ca": 0.68,
+    "ace": 0.68
+   },
+   "llama-3.2-3b": {
+    "none": 0.565,
+    "dim": 0.558,
+    "ca": 0.568,
+    "ace": 0.569
+   },
+   "gemma-2-2b": {
+    "none": 0.564,
+    "dim": 0.571,
+    "ca": 0.566,
+    "ace": 0.564
+   }
+  },
+  "mmlu_maxdev": 0.007000000000000006
+ }
+}

@@ -1,0 +1,1654 @@
+{
+ "meta": {
+  "analysis": "collapse",
+  "command": "python -m pipeline.analysis.collapse",
+  "commit": "fc4e2e4",
+  "dirty": false,
+  "date": "2026-10-18",
+  "study": {
+   "models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-7b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.1-8b",
+    "llama-3.2-3b",
+    "gemma-2-9b"
+   ],
+   "study_models": [
+    "qwen2.5-7b",
+    "llama-3.1-8b",
+    "gemma-2-9b"
+   ],
+   "heldout_models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.2-3b"
+   ],
+   "draws": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "directions": [
+    "dim",
+    "ca",
+    "ace"
+   ],
+   "bootstrap": {
+    "n": 5000,
+    "seed": 0
+   },
+   "amplification_templates": [
+    "jbb_dev_mode",
+    "jbb_research",
+    "jbb_evil_confidant",
+    "jbb_few_shot_compliance"
+   ],
+   "emotion_strength_emotions": [
+    "happy",
+    "sad",
+    "afraid"
+   ],
+   "gates_model": "llama-3.2-3b",
+   "names": {
+    "models": {
+     "qwen2.5-0.5b": "Qwen2.5-0.5B",
+     "qwen3-4b": "Qwen3-4B",
+     "qwen2.5-7b": "Qwen2.5-7B",
+     "qwen2.5-3b": "Qwen2.5-3B",
+     "gemma-2-2b": "Gemma-2-2B",
+     "llama-3.1-8b": "Llama-3.1-8B",
+     "llama-3.2-3b": "Llama-3.2-3B",
+     "gemma-2-9b": "Gemma-2-9B"
+    },
+    "models_short": {
+     "qwen2.5-0.5b": "Q-0.5B",
+     "qwen3-4b": "Q3-4B",
+     "qwen2.5-7b": "Q-7B",
+     "qwen2.5-3b": "Q-3B",
+     "gemma-2-2b": "G-2B",
+     "llama-3.1-8b": "L-8B",
+     "llama-3.2-3b": "L-3B",
+     "gemma-2-9b": "G-9B"
+    },
+    "directions": {
+     "none": "none",
+     "dim": "DIM",
+     "ca": "CA",
+     "ace": "ACE"
+    }
+   }
+  }
+ },
+ "results": {
+  "unit": "β dimensionless; degen a fraction",
+  "n": 144,
+  "cells": [
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.47277945280075073,
+    "beta_benign": 0.03912069648504257,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.49656811356544495,
+    "beta_benign": 0.03706369176506996,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.4955212473869324,
+    "beta_benign": 0.03541519492864609,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.4685981869697571,
+    "beta_benign": 0.0415983721613884,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.4957175552845001,
+    "beta_benign": 0.03662697598338127,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.49460601806640625,
+    "beta_benign": 0.03483956307172775,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.4738444685935974,
+    "beta_benign": 0.039700184017419815,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.49669966101646423,
+    "beta_benign": 0.03705824911594391,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.4958067536354065,
+    "beta_benign": 0.03545845299959183,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.4707910120487213,
+    "beta_benign": 0.04103782773017883,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.4974885880947113,
+    "beta_benign": 0.03727845102548599,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.4964365065097809,
+    "beta_benign": 0.03545799478888512,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.4669466018676758,
+    "beta_benign": 0.04227057844400406,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.49320900440216064,
+    "beta_benign": 0.03588765859603882,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.49221131205558777,
+    "beta_benign": 0.03433965891599655,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.4650309979915619,
+    "beta_benign": 0.043159954249858856,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.4952664077281952,
+    "beta_benign": 0.036255694925785065,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "qwen2.5-7b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.4941811263561249,
+    "beta_benign": 0.03441502898931503,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.41227930784225464,
+    "beta_benign": 0.1932634860277176,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.5869699716567993,
+    "beta_benign": 0.03313129022717476,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.631057858467102,
+    "beta_benign": 0.04187657684087753,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.4168699383735657,
+    "beta_benign": 0.1878349334001541,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.5855461359024048,
+    "beta_benign": 0.032470136880874634,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.6279836893081665,
+    "beta_benign": 0.04054534062743187,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.41505077481269836,
+    "beta_benign": 0.19103603065013885,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.5862974524497986,
+    "beta_benign": 0.03306886553764343,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.6304520964622498,
+    "beta_benign": 0.04163677617907524,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.4138120710849762,
+    "beta_benign": 0.1907849758863449,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.584469199180603,
+    "beta_benign": 0.031910814344882965,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.62772136926651,
+    "beta_benign": 0.04068320244550705,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.4153294861316681,
+    "beta_benign": 0.19129744172096252,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.5855700969696045,
+    "beta_benign": 0.032007865607738495,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.6303644180297852,
+    "beta_benign": 0.04105985537171364,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.4141048491001129,
+    "beta_benign": 0.1902444064617157,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.5842238664627075,
+    "beta_benign": 0.0319090373814106,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.1-8b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.6255391240119934,
+    "beta_benign": 0.04050491750240326,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 1.0334229469299316,
+    "beta_benign": 0.5630481243133545,
+    "degen": 0.5
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.4967631995677948,
+    "beta_benign": 0.042837999761104584,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.4839581251144409,
+    "beta_benign": 0.08152959495782852,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 1.0338428020477295,
+    "beta_benign": 0.5646193027496338,
+    "degen": 0.5
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.49974021315574646,
+    "beta_benign": 0.043126966804265976,
+    "degen": 0.0125
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.482962429523468,
+    "beta_benign": 0.08178035914897919,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 1.031667947769165,
+    "beta_benign": 0.5618542432785034,
+    "degen": 0.48333333333333334
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.49721649289131165,
+    "beta_benign": 0.04301014915108681,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.48275554180145264,
+    "beta_benign": 0.0812130719423294,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 1.0208934545516968,
+    "beta_benign": 0.5479623079299927,
+    "degen": 0.5
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.4912603199481964,
+    "beta_benign": 0.042402662336826324,
+    "degen": 0.0125
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.47882840037345886,
+    "beta_benign": 0.07839880138635635,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 1.0277701616287231,
+    "beta_benign": 0.55573970079422,
+    "degen": 0.49166666666666664
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.4943094849586487,
+    "beta_benign": 0.04288170114159584,
+    "degen": 0.016666666666666666
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.48110541701316833,
+    "beta_benign": 0.08006111532449722,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 1.0252583026885986,
+    "beta_benign": 0.5547968745231628,
+    "degen": 0.5125
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.49111050367355347,
+    "beta_benign": 0.042446382343769073,
+    "degen": 0.0125
+   },
+   {
+    "model": "gemma-2-9b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.48018354177474976,
+    "beta_benign": 0.07926724851131439,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.42648789286613464,
+    "beta_benign": 0.07973217964172363,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.5017050504684448,
+    "beta_benign": 0.03928980976343155,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.5073755979537964,
+    "beta_benign": 0.04131120815873146,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.42086753249168396,
+    "beta_benign": 0.08383236825466156,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.49965813755989075,
+    "beta_benign": 0.038772452622652054,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.5054505467414856,
+    "beta_benign": 0.041270457208156586,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.42510920763015747,
+    "beta_benign": 0.08196529000997543,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.5006384253501892,
+    "beta_benign": 0.03900303319096565,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.5069144368171692,
+    "beta_benign": 0.041076939553022385,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.4204641282558441,
+    "beta_benign": 0.08294272422790527,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.49880221486091614,
+    "beta_benign": 0.038879889994859695,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.5041249990463257,
+    "beta_benign": 0.04145905748009682,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.4204287528991699,
+    "beta_benign": 0.08241568505764008,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.4969867765903473,
+    "beta_benign": 0.03910669684410095,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.5021246075630188,
+    "beta_benign": 0.04126713424921036,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.4191145598888397,
+    "beta_benign": 0.08261167258024216,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.4975101351737976,
+    "beta_benign": 0.03890712186694145,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-3b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.5020691752433777,
+    "beta_benign": 0.04176989197731018,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.2939731180667877,
+    "beta_benign": 0.059004176408052444,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.31015145778656006,
+    "beta_benign": 0.05892244726419449,
+    "degen": 0.0375
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.31091615557670593,
+    "beta_benign": 0.058710407465696335,
+    "degen": 0.016666666666666666
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.2938879430294037,
+    "beta_benign": 0.0586487278342247,
+    "degen": 0.029166666666666667
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.30447426438331604,
+    "beta_benign": 0.058243732899427414,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.30508556962013245,
+    "beta_benign": 0.05805887654423714,
+    "degen": 0.025
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.2975522577762604,
+    "beta_benign": 0.05890149995684624,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.30538108944892883,
+    "beta_benign": 0.05876892805099487,
+    "degen": 0.029166666666666667
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.30638736486434937,
+    "beta_benign": 0.058641333132982254,
+    "degen": 0.0375
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.2948709726333618,
+    "beta_benign": 0.057737208902835846,
+    "degen": 0.0375
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.305690199136734,
+    "beta_benign": 0.05731901526451111,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.3059622347354889,
+    "beta_benign": 0.05714954808354378,
+    "degen": 0.041666666666666664
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.2895759046077728,
+    "beta_benign": 0.05838999152183533,
+    "degen": 0.029166666666666667
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.3045739531517029,
+    "beta_benign": 0.05732151120901108,
+    "degen": 0.025
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.3051563501358032,
+    "beta_benign": 0.0570819154381752,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.290590763092041,
+    "beta_benign": 0.05801088362932205,
+    "degen": 0.0125
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.30212849378585815,
+    "beta_benign": 0.05734226107597351,
+    "degen": 0.029166666666666667
+   },
+   {
+    "model": "qwen2.5-0.5b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.3024419844150543,
+    "beta_benign": 0.05714629963040352,
+    "degen": 0.03333333333333333
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.5701695084571838,
+    "beta_benign": 0.05904339626431465,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.5877309441566467,
+    "beta_benign": 0.05458568409085274,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.587864100933075,
+    "beta_benign": 0.0542290024459362,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.5701963901519775,
+    "beta_benign": 0.05966079235076904,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.5875720977783203,
+    "beta_benign": 0.05498369783163071,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.5873546600341797,
+    "beta_benign": 0.05469021201133728,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.570563018321991,
+    "beta_benign": 0.05952244997024536,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.5870774388313293,
+    "beta_benign": 0.055150408297777176,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.5870155692100525,
+    "beta_benign": 0.05485837906599045,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.5696902871131897,
+    "beta_benign": 0.05990121513605118,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.5886145234107971,
+    "beta_benign": 0.054860133677721024,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.5885827541351318,
+    "beta_benign": 0.05450927093625069,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.5674403309822083,
+    "beta_benign": 0.059284232556819916,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.5828462243080139,
+    "beta_benign": 0.0549669973552227,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.5823517441749573,
+    "beta_benign": 0.05474948137998581,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.5676103234291077,
+    "beta_benign": 0.06020892411470413,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.5859436392784119,
+    "beta_benign": 0.0551447868347168,
+    "degen": 0.0
+   },
+   {
+    "model": "qwen3-4b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.5854550004005432,
+    "beta_benign": 0.05492420867085457,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.30921095609664917,
+    "beta_benign": 0.2542364299297333,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.5250368714332581,
+    "beta_benign": 0.03786339610815048,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.6172305941581726,
+    "beta_benign": 0.054103951901197433,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.30971071124076843,
+    "beta_benign": 0.25071513652801514,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.523363471031189,
+    "beta_benign": 0.03760364651679993,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.6102770566940308,
+    "beta_benign": 0.05296406149864197,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.30887848138809204,
+    "beta_benign": 0.254131019115448,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.5248192548751831,
+    "beta_benign": 0.037974853068590164,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.6150651574134827,
+    "beta_benign": 0.05371241644024849,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.3056676685810089,
+    "beta_benign": 0.2559933662414551,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.5207098126411438,
+    "beta_benign": 0.03721635043621063,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.6136553287506104,
+    "beta_benign": 0.05446261167526245,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.3046756982803345,
+    "beta_benign": 0.2572706341743469,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.5204389095306396,
+    "beta_benign": 0.03744351491332054,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.6114457845687866,
+    "beta_benign": 0.054043322801589966,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.30472031235694885,
+    "beta_benign": 0.25535470247268677,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.5199324488639832,
+    "beta_benign": 0.03699978068470955,
+    "degen": 0.0
+   },
+   {
+    "model": "llama-3.2-3b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.6098933815956116,
+    "beta_benign": 0.054268110543489456,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 0,
+    "beta_harm": 0.9008690118789673,
+    "beta_benign": 0.37665966153144836,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 0,
+    "beta_harm": 0.5647748708724976,
+    "beta_benign": 0.05204189941287041,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 0,
+    "beta_harm": 0.546094536781311,
+    "beta_benign": 0.07065293937921524,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 1,
+    "beta_harm": 0.8945797681808472,
+    "beta_benign": 0.3697238564491272,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 1,
+    "beta_harm": 0.5648685693740845,
+    "beta_benign": 0.051311541348695755,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 1,
+    "beta_harm": 0.5451028347015381,
+    "beta_benign": 0.06913036108016968,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 2,
+    "beta_harm": 0.9003391861915588,
+    "beta_benign": 0.3757003843784332,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 2,
+    "beta_harm": 0.5669839382171631,
+    "beta_benign": 0.05241943150758743,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 2,
+    "beta_harm": 0.5476707220077515,
+    "beta_benign": 0.07079969346523285,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 3,
+    "beta_harm": 0.8879481554031372,
+    "beta_benign": 0.36063385009765625,
+    "degen": 0.008333333333333333
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 3,
+    "beta_harm": 0.5617485046386719,
+    "beta_benign": 0.050867341458797455,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 3,
+    "beta_harm": 0.5434473752975464,
+    "beta_benign": 0.06765793263912201,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 4,
+    "beta_harm": 0.8927645087242126,
+    "beta_benign": 0.36677059531211853,
+    "degen": 0.004166666666666667
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 4,
+    "beta_harm": 0.5606891512870789,
+    "beta_benign": 0.05096142366528511,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 4,
+    "beta_harm": 0.542067289352417,
+    "beta_benign": 0.06814387440681458,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "dim",
+    "draw": 5,
+    "beta_harm": 0.8933560848236084,
+    "beta_benign": 0.3678424060344696,
+    "degen": 0.0125
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ca",
+    "draw": 5,
+    "beta_harm": 0.5606129765510559,
+    "beta_benign": 0.0504479706287384,
+    "degen": 0.0
+   },
+   {
+    "model": "gemma-2-2b",
+    "cond": "ace",
+    "draw": 5,
+    "beta_harm": 0.5433570146560669,
+    "beta_benign": 0.06795386224985123,
+    "degen": 0.0
+   }
+  ],
+  "beta": {
+   "qwen2.5-0.5b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.2934084932009379,
+      "sd": 0.0029150177568637663
+     },
+     "beta_benign": {
+      "mean": 0.058448748042186104,
+      "sd": 0.0005009875053581653
+     },
+     "degen": {
+      "mean": 0.02916666666666667,
+      "sd": 0.008740073734751263
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.30539990961551666,
+      "sd": 0.0026420831528586155
+     },
+     "beta_benign": {
+      "mean": 0.05798631596068541,
+      "sd": 0.0007559297921294271
+     },
+     "degen": {
+      "mean": 0.03125,
+      "sd": 0.00437003686737563
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.3059916098912557,
+      "sd": 0.0027758618106766297
+     },
+     "beta_benign": {
+      "mean": 0.05779806338250637,
+      "sd": 0.0007706795784559083
+     },
+     "degen": {
+      "mean": 0.031249999999999997,
+      "sd": 0.009033118078616165
+     }
+    }
+   },
+   "qwen3-4b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.5692783097426096,
+      "sd": 0.001386914023322744
+     },
+     "beta_benign": {
+      "mean": 0.05960350173215071,
+      "sd": 0.0004196837086818008
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.5866308112939199,
+      "sd": 0.002050668501439014
+     },
+     "beta_benign": {
+      "mean": 0.054948618014653526,
+      "sd": 0.00020991447257150716
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.5864373048146566,
+      "sd": 0.00225704931105535
+     },
+     "beta_benign": {
+      "mean": 0.0546600924183925,
+      "sd": 0.00025556144059382414
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    }
+   },
+   "qwen2.5-7b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.46966512004534405,
+      "sd": 0.003418696537626579
+     },
+     "beta_benign": {
+      "mean": 0.04114793551464876,
+      "sd": 0.001531616526124088
+     },
+     "degen": {
+      "mean": 0.003472222222222222,
+      "sd": 0.0017010345435994293
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.4958248883485794,
+      "sd": 0.0015001185019766464
+     },
+     "beta_benign": {
+      "mean": 0.03669512023528417,
+      "sd": 0.0005399472025826037
+     },
+     "degen": {
+      "mean": 0.004166666666666667,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.4947938273350398,
+      "sd": 0.0015055639788829418
+     },
+     "beta_benign": {
+      "mean": 0.03498764894902706,
+      "sd": 0.0005282785924133885
+     },
+     "degen": {
+      "mean": 0.002777777777777778,
+      "sd": 0.002151657414559676
+     }
+    }
+   },
+   "qwen2.5-3b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.422078679005305,
+      "sd": 0.0029734551924965854
+     },
+     "beta_benign": {
+      "mean": 0.08224998662869136,
+      "sd": 0.0013829312258250455
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.49921679000059765,
+      "sd": 0.001814650266323051
+     },
+     "beta_benign": {
+      "mean": 0.03899316738049189,
+      "sd": 0.00018435486297133902
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.5046765605608622,
+      "sd": 0.002302480835800772
+     },
+     "beta_benign": {
+      "mean": 0.04135911477108797,
+      "sd": 0.00023535714788525095
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    }
+   },
+   "gemma-2-2b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.8949761192003886,
+      "sd": 0.004910270322894141
+     },
+     "beta_benign": {
+      "mean": 0.36955512563387555,
+      "sd": 0.005975672015390358
+     },
+     "degen": {
+      "mean": 0.006250000000000001,
+      "sd": 0.003486083443891982
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.5632796684900919,
+      "sd": 0.002632426196918783
+     },
+     "beta_benign": {
+      "mean": 0.05134160133699576,
+      "sd": 0.000751142091948594
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.5446232954661051,
+      "sd": 0.0020591619653890472
+     },
+     "beta_benign": {
+      "mean": 0.0690564438700676,
+      "sd": 0.001385459038247143
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    }
+   },
+   "llama-3.1-8b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.41457440455754596,
+      "sd": 0.0015579252798262949
+     },
+     "beta_benign": {
+      "mean": 0.19074354569117227,
+      "sd": 0.0017580289789251862
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.585512787103653,
+      "sd": 0.0010482247146747332
+     },
+     "beta_benign": {
+      "mean": 0.03241633499662081,
+      "sd": 0.0005691398725793693
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.6288530925909678,
+      "sd": 0.002131710957172862
+     },
+     "beta_benign": {
+      "mean": 0.041051111494501434,
+      "sd": 0.0005854847105648182
+     },
+     "degen": {
+      "mean": 0.004861111111111111,
+      "sd": 0.0031365527196211707
+     }
+    }
+   },
+   "llama-3.2-3b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 0.307143971323967,
+      "sd": 0.0023670686263287284
+     },
+     "beta_benign": {
+      "mean": 0.2546168814102809,
+      "sd": 0.002239906818072959
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.5223834613958994,
+      "sd": 0.0023032124577610164
+     },
+     "beta_benign": {
+      "mean": 0.03751692362129688,
+      "sd": 0.0003742815299506776
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.6129278838634491,
+      "sd": 0.0028997288558320873
+     },
+     "beta_benign": {
+      "mean": 0.053925745810071625,
+      "sd": 0.0005331728542645942
+     },
+     "degen": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    }
+   },
+   "gemma-2-9b": {
+    "dim": {
+     "beta_harm": {
+      "mean": 1.0288092692693074,
+      "sd": 0.005121401127478947
+     },
+     "beta_benign": {
+      "mean": 0.5580034255981445,
+      "sd": 0.0063289505643233475
+     },
+     "degen": {
+      "mean": 0.4979166666666666,
+      "sd": 0.009771699499632134
+     }
+    },
+    "ca": {
+     "beta_harm": {
+      "mean": 0.49506670236587524,
+      "sd": 0.0034656843066548835
+     },
+     "beta_benign": {
+      "mean": 0.04278431025644144,
+      "sd": 0.00029686181035406
+     },
+     "degen": {
+      "mean": 0.011111111111111112,
+      "sd": 0.004303314829119352
+     }
+    },
+    "ace": {
+     "beta_harm": {
+      "mean": 0.4816322426001231,
+      "sd": 0.0019328082330995944
+     },
+     "beta_benign": {
+      "mean": 0.08037503187855084,
+      "sd": 0.0013595209700076431
+     },
+     "degen": {
+      "mean": 0.0062499999999999995,
+      "sd": 0.002282177322938192
+     }
+    }
+   }
+  },
+  "beta_threshold": {
+   "n_cells": 144,
+   "above1": {
+    "n": 6,
+    "mean_degen": 0.4979166666666666,
+    "max_degen": 0.5125,
+    "models": [
+     [
+      "gemma-2-9b",
+      "dim"
+     ]
+    ]
+   },
+   "below1": {
+    "n": 138,
+    "mean_degen": 0.0056763285024154595,
+    "max_degen": 0.041666666666666664,
+    "max_beta": 0.9008690118789673
+   },
+   "beta_above1_mean": 1.0288092692693074,
+   "beta_above1_sd": 0.005121401127478947,
+   "corr_betaharm_degen": {
+    "pearson": 0.5920360137592009,
+    "spearman": -0.21623464823462546
+   },
+   "corr_betabenign_degen": {
+    "pearson": 0.7648110196738875,
+    "spearman": 0.18790746255008736
+   }
+  },
+  "omega_beta": {
+   "dim": {
+    "pearson": 0.8672633819005076,
+    "spearman": 0.8571428571428572
+   },
+   "ca": {
+    "pearson": -0.4294397323691358,
+    "spearman": -0.5000000000000001
+   },
+   "ace": {
+    "pearson": 0.5149039441990056,
+    "spearman": 0.19047619047619052
+   }
+  },
+  "dbeta_dfaith": {
+   "pearson": 0.9756850197764348,
+   "spearman": 0.9523809523809524
+  },
+  "beta_level_faith": {
+   "pearson": 0.39405882776004625,
+   "spearman": 0.4269565217391304
+  }
+ }
+}

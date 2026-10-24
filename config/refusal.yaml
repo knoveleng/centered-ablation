@@ -1,0 +1,17 @@
+# Refusal: harmful vs benign prompts, prompt-final states at the last decoder block.
+# Everything that varies between runs is a --set override, e.g.
+#   python -m pipeline.cli run --config config/refusal.yaml \
+#     --set model.model_id=meta-llama/Llama-3.2-3B-Instruct --set direction.name=ca \
+#     --set calibration_seed=3 --set data.eval=harmbench --set evaluator.name=harmbench
+
+concept:
+  name: refusal
+  positive: harmful        # pool whose states elicit the behaviour (AdvBench); jb_calib for the jailbreak direction
+  negative: harmless       # benign pool (Alpaca); also defines the common mode μ̂₋
+
+extraction:
+  sets: [harmbench, mmlu]  # held-out states the diagnose stage reads (besides both pools)
+  batch_size: 8            # prompts per forward pass (left padding)
+
+data:
+  eval: harmbench          # the set the steer stage generates on (pipeline/data.py EVAL_SETS)

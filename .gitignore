@@ -1,0 +1,27 @@
+# Stage and call cache: expensive (GPU generations, judge labels); back it up, never delete casually
+cache/
+cache_before_*/
+# figure previews (the PDFs go straight into paper/figures/)
+results/previews/
+# legacy outputs: large raw files stay out of git; the small frozen inputs the analyses read are versioned
+legacy/logs/
+legacy/results/acts/
+legacy/results/gen/
+legacy/results/emotion/gen/
+__pycache__/
+*.pyc
+.venv/
+# rebuilt from the cache by scripts/aggregate_results.py (large; not used by the paper)
+results/analysis/cache_tables.*
+# Lean build products and the Mathlib checkout (7 GB); `lake exe cache get` restores them
+formal/.lake/
+
+# Other
+# the paper is its own git repo (paper/.git): versioned locally, never part of this one
+paper/
+docs/notes/
+legacy/
+formal/
+report/
+tests/
+scripts/reproduce_paper.sh

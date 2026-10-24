@@ -1,0 +1,18 @@
+# Emotion: stories expressing the target emotion vs stories of the other three emotions, with
+# states read over the story (assistant-turn) tokens. Per story: the mean state (calibrates
+# DIM) and `keep` sampled token states (the common mode, η and collateral).
+#   python -m pipeline.cli run --config config/emotion.yaml \
+#     --set model.model_id=google/gemma-2-9b-it --set concept.target=sad \
+#     --set data.eval=ask_sad --set evaluator.name=emotion_judge
+
+concept:
+  name: emotion
+  target: happy            # happy | sad | angry | afraid
+
+extraction:
+  skip: 8                  # first story tokens carry little emotion yet
+  keep: 16                 # token states kept per story
+  max_len: 1024            # tokens read per story
+
+data:
+  eval: ask_happy          # ask_<emotion> | ask_none | alpaca50

@@ -1,0 +1,1588 @@
+{
+ "meta": {
+  "analysis": "emotion",
+  "command": "python -m pipeline.analysis.emotion",
+  "commit": "fc4e2e4",
+  "dirty": false,
+  "date": "2026-10-18",
+  "study": {
+   "models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-7b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.1-8b",
+    "llama-3.2-3b",
+    "gemma-2-9b"
+   ],
+   "study_models": [
+    "qwen2.5-7b",
+    "llama-3.1-8b",
+    "gemma-2-9b"
+   ],
+   "heldout_models": [
+    "qwen2.5-0.5b",
+    "qwen3-4b",
+    "qwen2.5-3b",
+    "gemma-2-2b",
+    "llama-3.2-3b"
+   ],
+   "draws": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "directions": [
+    "dim",
+    "ca",
+    "ace"
+   ],
+   "bootstrap": {
+    "n": 5000,
+    "seed": 0
+   },
+   "amplification_templates": [
+    "jbb_dev_mode",
+    "jbb_research",
+    "jbb_evil_confidant",
+    "jbb_few_shot_compliance"
+   ],
+   "emotion_strength_emotions": [
+    "happy",
+    "sad",
+    "afraid"
+   ],
+   "gates_model": "llama-3.2-3b",
+   "names": {
+    "models": {
+     "qwen2.5-0.5b": "Qwen2.5-0.5B",
+     "qwen3-4b": "Qwen3-4B",
+     "qwen2.5-7b": "Qwen2.5-7B",
+     "qwen2.5-3b": "Qwen2.5-3B",
+     "gemma-2-2b": "Gemma-2-2B",
+     "llama-3.1-8b": "Llama-3.1-8B",
+     "llama-3.2-3b": "Llama-3.2-3B",
+     "gemma-2-9b": "Gemma-2-9B"
+    },
+    "models_short": {
+     "qwen2.5-0.5b": "Q-0.5B",
+     "qwen3-4b": "Q3-4B",
+     "qwen2.5-7b": "Q-7B",
+     "qwen2.5-3b": "Q-3B",
+     "gemma-2-2b": "G-2B",
+     "llama-3.1-8b": "L-8B",
+     "llama-3.2-3b": "L-3B",
+     "gemma-2-9b": "G-9B"
+    },
+    "directions": {
+     "none": "none",
+     "dim": "DIM",
+     "ca": "CA",
+     "ace": "ACE"
+    }
+   }
+  }
+ },
+ "results": {
+  "unit": "fractions unless named *_pts (points) or vocab (words per 100)",
+  "emotion_diag": {
+   "n_pairs": 32,
+   "pooled_omega_reduction": 0.8614369501466275,
+   "beta_collateral": {
+    "pearson": 0.8868241714068599,
+    "spearman": 0.9060271321578304
+   },
+   "dbeta_dcollateral": {
+    "pearson": 0.9223368495436902,
+    "spearman": 0.9798387096774193
+   },
+   "within_model_spearman": {
+    "qwen2.5-0.5b": 1.0,
+    "qwen3-4b": 1.0,
+    "qwen2.5-7b": 1.0,
+    "qwen2.5-3b": 1.0,
+    "gemma-2-2b": 1.0,
+    "llama-3.1-8b": 1.0,
+    "llama-3.2-3b": 1.0,
+    "gemma-2-9b": 1.0
+   },
+   "eta_range": [
+    0.06979166716337204,
+    0.3114583492279053
+   ],
+   "beta_dimc_range": [
+    0.03710709884762764,
+    0.09947065263986588
+   ],
+   "beta_dim_max": 0.3234098553657532,
+   "rows": [
+    {
+     "model": "qwen2.5-7b",
+     "emotion": "happy",
+     "omega": 0.2395990788936615,
+     "eta_dim": 0.07187500596046448,
+     "eta_dimc": 0.10572917014360428,
+     "other_dim": 0.1276041716337204,
+     "other_dimc": 0.07534722238779068,
+     "beta_dim": 0.10458839684724808,
+     "beta_dimc": 0.060004305094480515,
+     "suppress": [
+      "joyful",
+      "delighted",
+      "惊喜",
+      "delight",
+      "enthusiastic"
+     ]
+    },
+    {
+     "model": "qwen2.5-7b",
+     "emotion": "sad",
+     "omega": 0.21811336278915405,
+     "eta_dim": 0.15416666865348816,
+     "eta_dimc": 0.06875000149011612,
+     "other_dim": 0.109375,
+     "other_dimc": 0.071180559694767,
+     "beta_dim": 0.09828409552574158,
+     "beta_dimc": 0.05776984989643097,
+     "suppress": [
+      "loneliness",
+      "sadness",
+      "melanch",
+      "nostalg",
+      "lonely"
+     ]
+    },
+    {
+     "model": "qwen2.5-7b",
+     "emotion": "angry",
+     "omega": 0.07969331741333008,
+     "eta_dim": 0.10885417461395264,
+     "eta_dimc": 0.12864583730697632,
+     "other_dim": 0.0928819477558136,
+     "other_dimc": 0.08298611640930176,
+     "beta_dim": 0.07155223935842514,
+     "beta_dimc": 0.06762555986642838,
+     "suppress": [
+      "?”",
+      "?”",
+      "怒",
+      ".”",
+      ",”"
+     ]
+    },
+    {
+     "model": "qwen2.5-7b",
+     "emotion": "afraid",
+     "omega": 0.07622253894805908,
+     "eta_dim": 0.1145833358168602,
+     "eta_dimc": 0.08958333730697632,
+     "other_dim": 0.0729166716337204,
+     "other_dimc": 0.0677083358168602,
+     "beta_dim": 0.06245725601911545,
+     "beta_dimc": 0.059234701097011566,
+     "suppress": [
+      "panic",
+      "恐慌",
+      "恐惧",
+      "alarm",
+      "警"
+     ]
+    },
+    {
+     "model": "llama-3.1-8b",
+     "emotion": "happy",
+     "omega": 0.10770712047815323,
+     "eta_dim": 0.17760416865348816,
+     "eta_dimc": 0.12968750298023224,
+     "other_dim": 0.10312500596046448,
+     "other_dimc": 0.08038194477558136,
+     "beta_dim": 0.07697974890470505,
+     "beta_dimc": 0.06176995486021042,
+     "suppress": [
+      "delighted",
+      "excited",
+      "delight",
+      "joyful",
+      "thrilled"
+     ]
+    },
+    {
+     "model": "llama-3.1-8b",
+     "emotion": "sad",
+     "omega": 0.01927228271961212,
+     "eta_dim": 0.08541667461395264,
+     "eta_dimc": 0.07916667312383652,
+     "other_dim": 0.06875000149011612,
+     "other_dimc": 0.07013889402151108,
+     "beta_dim": 0.051101066172122955,
+     "beta_dimc": 0.050355758517980576,
+     "suppress": [
+      "melanch",
+      "worn",
+      "sadness",
+      "lonely",
+      "loneliness"
+     ]
+    },
+    {
+     "model": "llama-3.1-8b",
+     "emotion": "angry",
+     "omega": 0.28096455335617065,
+     "eta_dim": 0.16354167461395264,
+     "eta_dimc": 0.12343750894069672,
+     "other_dim": 0.1848958432674408,
+     "other_dimc": 0.0954861119389534,
+     "beta_dim": 0.13005676865577698,
+     "beta_dimc": 0.058828964829444885,
+     "suppress": [
+      "?”",
+      ",”",
+      "”",
+      ".”",
+      ")”"
+     ]
+    },
+    {
+     "model": "llama-3.1-8b",
+     "emotion": "afraid",
+     "omega": 0.030847571790218353,
+     "eta_dim": 0.11354167014360428,
+     "eta_dimc": 0.1041666716337204,
+     "other_dim": 0.06875000149011612,
+     "other_dimc": 0.06579861044883728,
+     "beta_dim": 0.04940372705459595,
+     "beta_dimc": 0.04831302538514137,
+     "suppress": [
+      "panic",
+      "alarm",
+      "panicked",
+      "darkness",
+      "paranoia"
+     ]
+    },
+    {
+     "model": "gemma-2-9b",
+     "emotion": "happy",
+     "omega": 0.1305326521396637,
+     "eta_dim": 0.10989584028720856,
+     "eta_dimc": 0.0651041716337204,
+     "other_dim": 0.16718749701976776,
+     "other_dimc": 0.03020833432674408,
+     "beta_dim": 0.22604824602603912,
+     "beta_dimc": 0.04196050018072128,
+     "suppress": [
+      "delighted",
+      "joyful",
+      "joyous",
+      "beaming",
+      "excitedly"
+     ]
+    },
+    {
+     "model": "gemma-2-9b",
+     "emotion": "sad",
+     "omega": 0.20528024435043335,
+     "eta_dim": 0.1901041716337204,
+     "eta_dimc": 0.05000000447034836,
+     "other_dim": 0.21649305522441864,
+     "other_dimc": 0.03888889029622078,
+     "beta_dim": 0.3234098553657532,
+     "beta_dimc": 0.049620095640420914,
+     "suppress": [
+      "melancholy",
+      "sadness",
+      "mourning",
+      "lonely",
+      "loneliness"
+     ]
+    },
+    {
+     "model": "gemma-2-9b",
+     "emotion": "angry",
+     "omega": 0.16515682637691498,
+     "eta_dim": 0.2526041865348816,
+     "eta_dimc": 0.07447917014360428,
+     "other_dim": 0.2144097238779068,
+     "other_dimc": 0.05225694552063942,
+     "beta_dim": 0.2781882584095001,
+     "beta_dimc": 0.060319848358631134,
+     "suppress": [
+      "🤬",
+      "😡",
+      "!”",
+      "?”",
+      "!!!”"
+     ]
+    },
+    {
+     "model": "gemma-2-9b",
+     "emotion": "afraid",
+     "omega": 0.10986002534627914,
+     "eta_dim": 0.16354167461395264,
+     "eta_dimc": 0.05104167014360428,
+     "other_dim": 0.11597222834825516,
+     "other_dimc": 0.03020833432674408,
+     "beta_dim": 0.17134806513786316,
+     "beta_dimc": 0.03710709884762764,
+     "suppress": [
+      "Panic",
+      "Panic",
+      "Fear",
+      "panic",
+      "paranoia"
+     ]
+    },
+    {
+     "model": "qwen2.5-3b",
+     "emotion": "happy",
+     "omega": 0.3336731791496277,
+     "eta_dim": 0.3114583492279053,
+     "eta_dimc": 0.1536458432674408,
+     "other_dim": 0.36944445967674255,
+     "other_dimc": 0.12812499701976776,
+     "beta_dim": 0.27283787727355957,
+     "beta_dimc": 0.09085085242986679,
+     "suppress": [
+      "joyful",
+      "delighted",
+      "惊喜",
+      "delight",
+      "joy"
+     ]
+    },
+    {
+     "model": "qwen2.5-3b",
+     "emotion": "sad",
+     "omega": 0.11434295028448105,
+     "eta_dim": 0.17604167759418488,
+     "eta_dimc": 0.09062500298023224,
+     "other_dim": 0.14600694179534912,
+     "other_dimc": 0.08923611044883728,
+     "beta_dim": 0.11528155207633972,
+     "beta_dimc": 0.06790874898433685,
+     "suppress": [
+      "lonely",
+      "思念",
+      "faded",
+      "loneliness",
+      "longing"
+     ]
+    },
+    {
+     "model": "qwen2.5-3b",
+     "emotion": "angry",
+     "omega": 0.02517116814851761,
+     "eta_dim": 0.16354167461395264,
+     "eta_dimc": 0.1458333432674408,
+     "other_dim": 0.11996527761220932,
+     "other_dimc": 0.11857639253139496,
+     "beta_dim": 0.08905903995037079,
+     "beta_dimc": 0.08596502989530563,
+     "suppress": [
+      "…”",
+      ".”",
+      "?”",
+      "?”",
+      "!”"
+     ]
+    },
+    {
+     "model": "qwen2.5-3b",
+     "emotion": "afraid",
+     "omega": 0.2419777810573578,
+     "eta_dim": 0.30937501788139343,
+     "eta_dimc": 0.12968750298023224,
+     "other_dim": 0.25052082538604736,
+     "other_dimc": 0.10260416567325592,
+     "beta_dim": 0.2030985951423645,
+     "beta_dimc": 0.08186528086662292,
+     "suppress": [
+      "怖",
+      "alarm",
+      "蠕",
+      "恐怖",
+      "恐慌"
+     ]
+    },
+    {
+     "model": "qwen2.5-0.5b",
+     "emotion": "happy",
+     "omega": 0.3694767355918884,
+     "eta_dim": 0.20000001788139343,
+     "eta_dimc": 0.12187500298023224,
+     "other_dim": 0.2795138955116272,
+     "other_dimc": 0.09131944924592972,
+     "beta_dim": 0.2106810063123703,
+     "beta_dimc": 0.06881710141897202,
+     "suppress": [
+      "惊喜",
+      "自豪",
+      "delighted",
+      "delight",
+      "喜悦"
+     ]
+    },
+    {
+     "model": "qwen2.5-0.5b",
+     "emotion": "sad",
+     "omega": 0.22362220287322998,
+     "eta_dim": 0.17916667461395264,
+     "eta_dimc": 0.06875000149011612,
+     "other_dim": 0.1467013955116272,
+     "other_dimc": 0.07829861342906952,
+     "beta_dim": 0.1327424943447113,
+     "beta_dimc": 0.05541765317320824,
+     "suppress": [
+      "思念",
+      "evenings",
+      "washing",
+      "worn",
+      "Sundays"
+     ]
+    },
+    {
+     "model": "qwen2.5-0.5b",
+     "emotion": "angry",
+     "omega": 0.0388265997171402,
+     "eta_dim": 0.16979166865348816,
+     "eta_dimc": 0.1510416716337204,
+     "other_dim": 0.10989583283662796,
+     "other_dimc": 0.10572917014360428,
+     "beta_dim": 0.07232138514518738,
+     "beta_dimc": 0.07102682441473007,
+     "suppress": [
+      "?”",
+      "?”",
+      "”",
+      ".”",
+      ".”"
+     ]
+    },
+    {
+     "model": "qwen2.5-0.5b",
+     "emotion": "afraid",
+     "omega": 0.13930347561836243,
+     "eta_dim": 0.1692708432674408,
+     "eta_dimc": 0.10208334028720856,
+     "other_dim": 0.1059027835726738,
+     "other_dimc": 0.07743055373430252,
+     "beta_dim": 0.09050873667001724,
+     "beta_dimc": 0.06489580869674683,
+     "suppress": [
+      "门窗",
+      "报警",
+      "门外",
+      "警",
+      "鞫"
+     ]
+    },
+    {
+     "model": "qwen3-4b",
+     "emotion": "happy",
+     "omega": 0.26721689105033875,
+     "eta_dim": 0.2291666716337204,
+     "eta_dimc": 0.1093750074505806,
+     "other_dim": 0.18090277910232544,
+     "other_dimc": 0.07135416567325592,
+     "beta_dim": 0.17525573074817657,
+     "beta_dimc": 0.07363361120223999,
+     "suppress": [
+      "joyful",
+      "delighted",
+      "joy",
+      "惊喜",
+      "delight"
+     ]
+    },
+    {
+     "model": "qwen3-4b",
+     "emotion": "sad",
+     "omega": 0.051912806928157806,
+     "eta_dim": 0.08697917312383652,
+     "eta_dimc": 0.09427084028720856,
+     "other_dim": 0.09427083283662796,
+     "other_dimc": 0.0833333358168602,
+     "beta_dim": 0.10502908378839493,
+     "beta_dimc": 0.09947065263986588,
+     "suppress": [
+      "worn",
+      "思念",
+      "想念",
+      "sometimes",
+      "curled"
+     ]
+    },
+    {
+     "model": "qwen3-4b",
+     "emotion": "angry",
+     "omega": 0.09458772838115692,
+     "eta_dim": 0.10989584028720856,
+     "eta_dimc": 0.1197916716337204,
+     "other_dim": 0.10781250149011612,
+     "other_dimc": 0.09652777761220932,
+     "beta_dim": 0.10132861137390137,
+     "beta_dimc": 0.09635080397129059,
+     "suppress": [
+      "!”",
+      "?”",
+      "！”",
+      "？”",
+      "…”"
+     ]
+    },
+    {
+     "model": "qwen3-4b",
+     "emotion": "afraid",
+     "omega": 0.261261522769928,
+     "eta_dim": 0.1197916716337204,
+     "eta_dimc": 0.07968750596046448,
+     "other_dim": 0.15034723281860352,
+     "other_dimc": 0.07847222685813904,
+     "beta_dim": 0.16761966049671173,
+     "beta_dimc": 0.08639561384916306,
+     "suppress": [
+      "Alarm",
+      "呻",
+      "警",
+      "防盗",
+      "恐慌"
+     ]
+    },
+    {
+     "model": "llama-3.2-3b",
+     "emotion": "happy",
+     "omega": 0.17629817128181458,
+     "eta_dim": 0.23385417461395264,
+     "eta_dimc": 0.12031250447034836,
+     "other_dim": 0.1467013955116272,
+     "other_dimc": 0.0876736119389534,
+     "beta_dim": 0.10993952304124832,
+     "beta_dimc": 0.06380730867385864,
+     "suppress": [
+      "delighted",
+      "joyful",
+      "delight",
+      "joy",
+      "happy"
+     ]
+    },
+    {
+     "model": "llama-3.2-3b",
+     "emotion": "sad",
+     "omega": 0.05128037929534912,
+     "eta_dim": 0.09427084028720856,
+     "eta_dimc": 0.07447917014360428,
+     "other_dim": 0.07309027761220932,
+     "other_dimc": 0.06284722685813904,
+     "beta_dim": 0.05550726503133774,
+     "beta_dimc": 0.04875239357352257,
+     "suppress": [
+      "worn",
+      "dried",
+      "faded",
+      "lonely",
+      "melanch"
+     ]
+    },
+    {
+     "model": "llama-3.2-3b",
+     "emotion": "angry",
+     "omega": 0.3532228469848633,
+     "eta_dim": 0.19635418057441711,
+     "eta_dimc": 0.12135417014360428,
+     "other_dim": 0.24947917461395264,
+     "other_dimc": 0.09687500447034836,
+     "beta_dim": 0.1985822170972824,
+     "beta_dimc": 0.06295670568943024,
+     "suppress": [
+      ".”",
+      "?”",
+      "?”",
+      "”",
+      ".”"
+     ]
+    },
+    {
+     "model": "llama-3.2-3b",
+     "emotion": "afraid",
+     "omega": 0.043946150690317154,
+     "eta_dim": 0.12708334624767303,
+     "eta_dimc": 0.10208334028720856,
+     "other_dim": 0.07013889402151108,
+     "other_dimc": 0.06388889253139496,
+     "beta_dim": 0.048452962189912796,
+     "beta_dimc": 0.04521610587835312,
+     "suppress": [
+      "panic",
+      "alarm",
+      "alarmed",
+      "door",
+      "pulse"
+     ]
+    },
+    {
+     "model": "gemma-2-2b",
+     "emotion": "happy",
+     "omega": 0.12128874659538269,
+     "eta_dim": 0.11927083879709244,
+     "eta_dimc": 0.0963541716337204,
+     "other_dim": 0.17430555820465088,
+     "other_dimc": 0.06753472238779068,
+     "beta_dim": 0.18349386751651764,
+     "beta_dimc": 0.08033131808042526,
+     "suppress": [
+      "delighted",
+      "joyfully",
+      "joyful",
+      "beaming",
+      "delightful"
+     ]
+    },
+    {
+     "model": "gemma-2-2b",
+     "emotion": "sad",
+     "omega": 0.059894781559705734,
+     "eta_dim": 0.07135417312383652,
+     "eta_dimc": 0.08437500149011612,
+     "other_dim": 0.09131944924592972,
+     "other_dimc": 0.0694444477558136,
+     "beta_dim": 0.09853192418813705,
+     "beta_dimc": 0.06646821647882462,
+     "suppress": [
+      "lonely",
+      "worn",
+      "melancholy",
+      "sadness",
+      "mourning"
+     ]
+    },
+    {
+     "model": "gemma-2-2b",
+     "emotion": "angry",
+     "omega": 0.13449528813362122,
+     "eta_dim": 0.27135416865348816,
+     "eta_dimc": 0.1302083432674408,
+     "other_dim": 0.21684028208255768,
+     "other_dimc": 0.09531250596046448,
+     "beta_dim": 0.18797613680362701,
+     "beta_dimc": 0.07924727350473404,
+     "suppress": [
+      "colère",
+      "🤬",
+      "!!!”",
+      "!”",
+      "😡"
+     ]
+    },
+    {
+     "model": "gemma-2-2b",
+     "emotion": "afraid",
+     "omega": 0.0037166187539696693,
+     "eta_dim": 0.06979166716337204,
+     "eta_dimc": 0.07343750447034836,
+     "other_dim": 0.0494791679084301,
+     "other_dimc": 0.04965277761220932,
+     "beta_dim": 0.053924065083265305,
+     "beta_dimc": 0.05297636613249779,
+     "suppress": [
+      "Panic",
+      "Horror",
+      "Terror",
+      "Alarm",
+      "Alarm"
+     ]
+    }
+   ]
+  },
+  "emotion_strength": [
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.68,
+    "vocab": 2.13,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.65,
+    "vocab": 1.41,
+    "degen": 0.0,
+    "alpaca": 0.52
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.5,
+    "vocab": 0.9,
+    "degen": 0.0,
+    "alpaca": 0.68
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.35,
+    "vocab": 0.5,
+    "degen": 0.0,
+    "alpaca": 0.74
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.7,
+    "vocab": 1.21,
+    "degen": 0.0,
+    "alpaca": 0.52
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.53,
+    "vocab": 0.77,
+    "degen": 0.0,
+    "alpaca": 0.64
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.4,
+    "vocab": 0.23,
+    "degen": 0.0,
+    "alpaca": 0.68
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.9,
+    "vocab": 1.54,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.82,
+    "vocab": 1.02,
+    "degen": 0.0,
+    "alpaca": 0.34
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.78,
+    "vocab": 0.61,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.45,
+    "vocab": 0.27,
+    "degen": 0.03,
+    "alpaca": 0.64
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.82,
+    "vocab": 1.08,
+    "degen": 0.0,
+    "alpaca": 0.38
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.75,
+    "vocab": 0.85,
+    "degen": 0.0,
+    "alpaca": 0.5
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.65,
+    "vocab": 0.54,
+    "degen": 0.05,
+    "alpaca": 0.58
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.9,
+    "vocab": 1.56,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.82,
+    "vocab": 1.76,
+    "degen": 0.0,
+    "alpaca": 0.4
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.9,
+    "vocab": 2.17,
+    "degen": 0.0,
+    "alpaca": 0.56
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.82,
+    "vocab": 2.58,
+    "degen": 0.0,
+    "alpaca": 0.66
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.78,
+    "vocab": 1.71,
+    "degen": 0.0,
+    "alpaca": 0.34
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.8,
+    "vocab": 2.05,
+    "degen": 0.0,
+    "alpaca": 0.56
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.88,
+    "vocab": 2.51,
+    "degen": 0.0,
+    "alpaca": 0.62
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.57,
+    "vocab": 1.65,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.53,
+    "vocab": 1.5,
+    "degen": 0.0,
+    "alpaca": 0.4
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.47,
+    "vocab": 1.36,
+    "degen": 0.0,
+    "alpaca": 0.46
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.38,
+    "vocab": 1.06,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.47,
+    "vocab": 1.59,
+    "degen": 0.0,
+    "alpaca": 0.42
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.47,
+    "vocab": 1.32,
+    "degen": 0.0,
+    "alpaca": 0.52
+   },
+   {
+    "model": "qwen2.5-7b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.45,
+    "vocab": 1.19,
+    "degen": 0.0,
+    "alpaca": 0.58
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.57,
+    "vocab": 1.89,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.53,
+    "vocab": 1.51,
+    "degen": 0.0,
+    "alpaca": 0.36
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.55,
+    "vocab": 1.18,
+    "degen": 0.0,
+    "alpaca": 0.58
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.5,
+    "vocab": 0.78,
+    "degen": 0.0,
+    "alpaca": 0.7
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.6,
+    "vocab": 1.48,
+    "degen": 0.0,
+    "alpaca": 0.3
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.45,
+    "vocab": 0.89,
+    "degen": 0.0,
+    "alpaca": 0.48
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.35,
+    "vocab": 0.84,
+    "degen": 0.0,
+    "alpaca": 0.64
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.85,
+    "vocab": 1.26,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.85,
+    "vocab": 1.02,
+    "degen": 0.0,
+    "alpaca": 0.28
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.78,
+    "vocab": 0.92,
+    "degen": 0.0,
+    "alpaca": 0.46
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.68,
+    "vocab": 0.6,
+    "degen": 0.0,
+    "alpaca": 0.48
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.82,
+    "vocab": 0.96,
+    "degen": 0.0,
+    "alpaca": 0.32
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.68,
+    "vocab": 0.86,
+    "degen": 0.0,
+    "alpaca": 0.4
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.6,
+    "vocab": 0.55,
+    "degen": 0.0,
+    "alpaca": 0.48
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.75,
+    "vocab": 1.48,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.7,
+    "vocab": 1.4,
+    "degen": 0.0,
+    "alpaca": 0.42
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.8,
+    "vocab": 1.42,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.82,
+    "vocab": 1.54,
+    "degen": 0.0,
+    "alpaca": 0.64
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.78,
+    "vocab": 1.44,
+    "degen": 0.0,
+    "alpaca": 0.38
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.78,
+    "vocab": 1.42,
+    "degen": 0.0,
+    "alpaca": 0.5
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.75,
+    "vocab": 1.27,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.57,
+    "vocab": 1.14,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.62,
+    "vocab": 0.95,
+    "degen": 0.0,
+    "alpaca": 0.4
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.6,
+    "vocab": 0.86,
+    "degen": 0.0,
+    "alpaca": 0.5
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.6,
+    "vocab": 0.62,
+    "degen": 0.0,
+    "alpaca": 0.56
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.65,
+    "vocab": 1.02,
+    "degen": 0.0,
+    "alpaca": 0.42
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.68,
+    "vocab": 0.88,
+    "degen": 0.0,
+    "alpaca": 0.48
+   },
+   {
+    "model": "llama-3.1-8b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.57,
+    "vocab": 0.6,
+    "degen": 0.0,
+    "alpaca": 0.5
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.65,
+    "vocab": 1.89,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.7,
+    "vocab": 1.88,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.65,
+    "vocab": 2.15,
+    "degen": 0.0,
+    "alpaca": 0.6
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.8,
+    "vocab": 32.04,
+    "degen": 0.35,
+    "alpaca": 0.7
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.57,
+    "vocab": 1.33,
+    "degen": 0.0,
+    "alpaca": 0.36
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.42,
+    "vocab": 1.02,
+    "degen": 0.0,
+    "alpaca": 0.46
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "happy",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.4,
+    "vocab": 0.74,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.93,
+    "vocab": 1.23,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 1,
+    "pe": 1.0,
+    "vocab": 1.64,
+    "degen": 0.0,
+    "alpaca": 0.66
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.95,
+    "vocab": 1.89,
+    "degen": 0.0,
+    "alpaca": 0.64
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.93,
+    "vocab": 39.11,
+    "degen": 0.55,
+    "alpaca": 0.88
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.82,
+    "vocab": 0.85,
+    "degen": 0.0,
+    "alpaca": 0.32
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.85,
+    "vocab": 0.39,
+    "degen": 0.0,
+    "alpaca": 0.4
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "sad",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.72,
+    "vocab": 0.32,
+    "degen": 0.0,
+    "alpaca": 0.52
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.9,
+    "vocab": 1.65,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.7,
+    "vocab": 0.82,
+    "degen": 0.0,
+    "alpaca": 0.62
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.12,
+    "vocab": 0.17,
+    "degen": 0.23,
+    "alpaca": 0.68
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.0,
+    "vocab": 0.0,
+    "degen": 1.0,
+    "alpaca": 0.74
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.95,
+    "vocab": 1.4,
+    "degen": 0.0,
+    "alpaca": 0.36
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.85,
+    "vocab": 1.69,
+    "degen": 0.0,
+    "alpaca": 0.52
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "angry",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.85,
+    "vocab": 1.39,
+    "degen": 0.0,
+    "alpaca": 0.58
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "baseline",
+    "s": 0,
+    "pe": 0.88,
+    "vocab": 1.24,
+    "degen": 0.0,
+    "alpaca": null
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 1,
+    "pe": 0.8,
+    "vocab": 0.9,
+    "degen": 0.0,
+    "alpaca": 0.54
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 2,
+    "pe": 0.38,
+    "vocab": 0.26,
+    "degen": 0.0,
+    "alpaca": 0.64
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dim",
+    "s": 3,
+    "pe": 0.0,
+    "vocab": 0.0,
+    "degen": 0.25,
+    "alpaca": 0.7
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 1,
+    "pe": 0.8,
+    "vocab": 1.01,
+    "degen": 0.0,
+    "alpaca": 0.34
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 2,
+    "pe": 0.8,
+    "vocab": 0.74,
+    "degen": 0.0,
+    "alpaca": 0.38
+   },
+   {
+    "model": "gemma-2-9b",
+    "emotion": "afraid",
+    "cond": "dimc",
+    "s": 3,
+    "pe": 0.72,
+    "vocab": 0.47,
+    "degen": 0.0,
+    "alpaca": 0.48
+   }
+  ],
+  "emotion_strength_agg": {
+   "dim/s1": {
+    "vocab_rel": -0.13999263429708864,
+    "pe_pts": -1.1111111111111107,
+    "pe_rel": 0.9849958866867079,
+    "degen_mean": 0.0,
+    "degen_max": 0.0
+   },
+   "dim/s2": {
+    "vocab_rel": -0.2627998022666078,
+    "pe_pts": -10.555555555555555,
+    "pe_rel": 0.8661446633171556,
+    "degen_mean": 0.0,
+    "degen_max": 0.0
+   },
+   "dim/s3": {
+    "vocab_rel": 4.699520049496282,
+    "pe_pts": -21.38888888888889,
+    "pe_rel": 0.7342914208501023,
+    "degen_mean": 0.13055555555555556,
+    "degen_max": 0.55
+   },
+   "ca/s1": {
+    "vocab_rel": -0.23621411081271346,
+    "pe_pts": -3.611111111111113,
+    "pe_rel": 0.9572316588656459,
+    "degen_mean": 0.0,
+    "degen_max": 0.0
+   },
+   "ca/s2": {
+    "vocab_rel": -0.4343152327500672,
+    "pe_pts": -10.833333333333332,
+    "pe_rel": 0.8527653600969884,
+    "degen_mean": 0.0,
+    "degen_max": 0.0
+   },
+   "ca/s3": {
+    "vocab_rel": -0.5976755151113663,
+    "pe_pts": -19.166666666666668,
+    "pe_rel": 0.7377490381468784,
+    "degen_mean": 0.005555555555555556,
+    "degen_max": 0.05
+   }
+  }
+ }
+}

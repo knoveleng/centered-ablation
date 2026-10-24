@@ -1,0 +1,79 @@
+# The one config: every tunable value of the pipeline and the analyses. config/refusal.yaml and
+# config/emotion.yaml add a concept's shape on top; everything else is a --set override.
+# Component defaults (defaults.<family>.<name>) are merged into the run's params before the cache
+# key is computed, so changing one is a cache miss.
+
+resources:
+  # short name -> checkpoint and the per-model vLLM facts (scripts/models.sh reads these).
+  # gpu_memory and attention_backend change memory and kernels, not outputs; Gemma-2 needs
+  # TRITON_ATTN because the default FlashAttention hangs in warmup on Blackwell GPUs.
+  models:
+    qwen2.5-0.5b: {id: Qwen/Qwen2.5-0.5B-Instruct, gpu_memory: 0.50}
+    qwen3-4b: {id: Qwen/Qwen3-4B-Instruct-2507, gpu_memory: 0.70}
+    qwen2.5-7b: {id: Qwen/Qwen2.5-7B-Instruct, gpu_memory: 0.80}
+    qwen2.5-3b: {id: Qwen/Qwen2.5-3B-Instruct, gpu_memory: 0.70}
+    gemma-2-2b: {id: google/gemma-2-2b-it, gpu_memory: 0.60, attention_backend: TRITON_ATTN}
+    llama-3.1-8b: {id: meta-llama/Llama-3.1-8B-Instruct, gpu_memory: 0.80}
+    llama-3.2-3b: {id: meta-llama/Llama-3.2-3B-Instruct, gpu_memory: 0.70}
+    gemma-2-9b: {id: google/gemma-2-9b-it, gpu_memory: 0.85, attention_backend: TRITON_ATTN}
+  # vLLM memory knobs of each judge (not in the evaluate key: they do not change labels)
+  judges:
+    harmbench: {max_model_len: 2048, gpu_memory: 0.90}
+    llamaguard: {max_model_len: 4096, gpu_memory: 0.85}
+    emotion_judge: {max_model_len: 4096, gpu_memory: 0.85}
+    pairwise_quality: {max_model_len: 8192, gpu_memory: 0.85}
+
+# How each pool and evaluation set is built (pipeline/data.py). A set's params enter the key of
+# every stage that reads the set. Sets not listed have no parameters.
+sets:
+  harmful: {shuffle_seed: 42}                          # AdvBench, 416 prompts
+  harmless: {shuffle_seed: 42, excluded: [256, 356]}   # Alpaca; the excluded rows are the evaluation slice
+  alpaca: {shuffle_seed: 42, slice: [256, 356]}
+  alpaca50: {shuffle_seed: 42, slice: [256, 356], n: 50}
+  gsm8k: {n: 100}
+  mmlu: {n: 1000, shuffle_seed: 0}
+  stories: {per_emotion: 120, shuffle_seed: 0}         # emotion calibration stories
+
+# ---------------------------------------------------------------- cost controls (never in a key)
+cache_only: false              # true: any cache miss is an error; no model or judge is loaded
+budget: {max_gpu_hours: null}  # stop (exit 75) before a GPU stage once cache/ledger.jsonl reaches this
+
+# ---------------------------------------------------------------- one run (one point)
+model: {model_id: null, max_model_len: 2048, gpu_memory: 0.80, attention_backend: null}
+calibration_seed: 0
+calibration_size: 256          # prompts per class in one calibration draw
+direction: {name: ca, params: {}}
+diagnose: {strength: 1.0, footprint_k: 12}
+steering: {strength: 1.0}
+generation: {temperature: 0.0, max_tokens: 256, sample: 0}   # sample: index of a repeated generation of the same point
+evaluator: {name: refusal_keyword, params: {}}
+
+defaults:
+  direction:
+    mmd_erasure: {lr: 0.01, n_stop: 80, init_seed: 0}   # n_stop: held-out rows per class for early stopping
+  evaluator:
+    degeneration: {min_bytes: 200, max_ratio: 0.2}      # zlib-compressed size below max_ratio of an output >= min_bytes
+    refusal_keyword: {head_chars: 200}
+    faithfulness: {threshold: 0.5}
+    harmbench: {model_id: cais/HarmBench-Llama-2-13b-cls, truncate: 512}
+    llamaguard: {model_id: meta-llama/Llama-Guard-3-8B, truncate: 512}
+    emotion_judge: {model_id: Qwen/Qwen3-8B, clip_chars: 3000}
+    pairwise_quality: {model_id: Qwen/Qwen3-8B, clip_chars: 2000}
+
+# ---------------------------------------------------------------- analyses (pipeline/analysis/study.py)
+study:
+  models: [qwen2.5-0.5b, qwen3-4b, qwen2.5-7b, qwen2.5-3b, gemma-2-2b, llama-3.1-8b, llama-3.2-3b, gemma-2-9b]  # paper order (by ω)
+  study_models: [qwen2.5-7b, llama-3.1-8b, gemma-2-9b]      # the analysis was developed on these
+  heldout_models: [qwen2.5-0.5b, qwen3-4b, qwen2.5-3b, gemma-2-2b, llama-3.2-3b]   # diagnostics locked before generation
+  draws: [0, 1, 2, 3, 4, 5]
+  directions: [dim, ca, ace]
+  bootstrap: {n: 5000, seed: 0}
+  amplification_templates: [jbb_dev_mode, jbb_research, jbb_evil_confidant, jbb_few_shot_compliance]   # held out from the jailbreak direction
+  emotion_strength_emotions: [happy, sad, afraid]      # the strength sweep's cells (x study models)
+  gates_model: llama-3.2-3b                            # the main figure's per-prompt gates
+  names:                                               # every report, table and figure uses these labels
+    models: {qwen2.5-0.5b: Qwen2.5-0.5B, qwen3-4b: Qwen3-4B, qwen2.5-7b: Qwen2.5-7B, qwen2.5-3b: Qwen2.5-3B,
+             gemma-2-2b: Gemma-2-2B, llama-3.1-8b: Llama-3.1-8B, llama-3.2-3b: Llama-3.2-3B, gemma-2-9b: Gemma-2-9B}
+    models_short: {qwen2.5-0.5b: Q-0.5B, qwen3-4b: Q3-4B, qwen2.5-7b: Q-7B, qwen2.5-3b: Q-3B,
+                   gemma-2-2b: G-2B, llama-3.1-8b: L-8B, llama-3.2-3b: L-3B, gemma-2-9b: G-9B}
+    directions: {none: none, dim: DIM, ca: CA, ace: ACE}

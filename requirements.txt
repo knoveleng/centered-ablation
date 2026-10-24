@@ -1,0 +1,9 @@
+torch
+transformers
+vllm
+datasets
+huggingface_hub
+safetensors
+pyyaml
+scipy
+matplotlib
