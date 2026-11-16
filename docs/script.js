@@ -417,6 +417,11 @@ function initLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // respect reduced-motion: show the poster frame with controls instead of autoplaying
+    const heroVideo = document.querySelector('.hero-media video');
+    if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        heroVideo.removeAttribute('autoplay'); heroVideo.pause(); heroVideo.controls = true;
+    }
     initArxiv(); initNav(); initCopy(); initLightbox();
     initGeo(); initDumbbell(); initScatter(); drawJudges();
     if (window.renderMathInElement) {

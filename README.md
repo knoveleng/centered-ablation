@@ -3,6 +3,14 @@
 Code and results for *Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or
 Collapses, and a Closed-Form Fix*.
 
+**[Project page](https://knoveleng.github.io/centered-ablation/)**
+
+<p align="center">
+  <img src="docs/assets/centered_ablation_mechanism.gif" width="720"
+       alt="Animation: standard (DIM) ablation moves benign states; Centered Ablation moves only harmful states">
+  <br><sub>Schematic 2D picture, not real activations.</sub>
+</p>
+
 Directional ablation removes the component of a hidden state along a behaviour direction (e.g.
 refusal). At the last residual stream it is exactly a logit bias scaled by a gate, the cosine
 $\kappa_u(h) = h^\top u / \lVert h\rVert$ between the state and the direction. Last-layer states share a large common mode, so the standard

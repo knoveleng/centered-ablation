@@ -96,6 +96,11 @@ h1, h2, h3 { line-height: 1.25; }
 }
 .tldr p { font-size: 1.05rem; color: var(--ink); }
 
+.hero-media { margin: 2.25rem auto 0; }
+.hero-media video, .hero-media img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #fff;
+    border: 1px solid var(--line); border-radius: 14px; }
+.hero-media figcaption { font-size: 0.85rem; color: var(--ink-2); margin-top: 0.6rem; }
+
 /* ---------- Sections ---------- */
 .section { padding: 5rem 0; }
 .section-tint { background: var(--tint); }

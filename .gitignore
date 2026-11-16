@@ -25,3 +25,6 @@ formal/
 report/
 tests/
 scripts/reproduce_paper.sh
+
+# GIF/video sources and renders for the paper (made locally, not versioned)
+video/
