@@ -3,7 +3,7 @@
 Code and results for *Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or
 Collapses, and a Closed-Form Fix*.
 
-**[Project page](https://knoveleng.github.io/centered-ablation/)**
+**[Paper (arXiv:2611.20148)](https://arxiv.org/abs/2611.20148)** · **[Project page](https://knoveleng.github.io/centered-ablation/)**
 
 <p align="center">
   <img src="docs/assets/centered_ablation_mechanism.gif" width="720"
@@ -74,3 +74,17 @@ scripts/run_emotion.sh         # the second concept (emotional tone)
 - [`docs/architecture.md`](docs/architecture.md): layout, stages, cache, config and outputs.
 - [`docs/extending.md`](docs/extending.md): adding a model, direction, evaluator, evaluation set,
   analysis or sweep.
+
+## Citation
+
+```bibtex
+@misc{dang2026centered,
+  title         = {Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or Collapses, and a Closed-Form Fix},
+  author        = {Quy-Anh Dang and Chris Ngo},
+  year          = {2026},
+  eprint        = {2611.20148},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2611.20148},
+}
+```

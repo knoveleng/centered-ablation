@@ -1,7 +1,6 @@
 // Centered Ablation project page
 
-// TODO: set to the arXiv abstract URL (e.g. https://arxiv.org/abs/XXXX.XXXXX) once announced
-const ARXIV_URL = '';
+const ARXIV_URL = 'https://arxiv.org/abs/2611.20148';
 
 // ---------------------------------------------------------------------------------------------
 // Data, from the paper's appendix tables (mean over 6 calibration draws, s = 1, last layer).
